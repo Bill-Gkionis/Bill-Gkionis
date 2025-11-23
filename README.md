@@ -38,7 +38,7 @@ I enjoy designing PCBs, writing firmware, building test setups, and understandin
 - **Altium Designer Essentials Certification**
 - **SolidWorks Associate Certification**
 
-*(More can be added here as you earn them.)*
+
 
 ---
 
