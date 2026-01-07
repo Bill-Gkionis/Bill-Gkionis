@@ -104,6 +104,5 @@ If you’d like to know more about any specific project, feel free to reach out.
 
 - **Email:** `grader_encore6t@icloud.com`
 - **GitHub:** [@Bill-Gkionis](https://github.com/Bill-Gkionis)
-- *(Optional)* **LinkedIn:** `[Your LinkedIn Profile](https://www.linkedin.com/in/your-handle/)`
 
 > 🔒 I deliberately keep personal details light here. Full CV and more information are available on request.
