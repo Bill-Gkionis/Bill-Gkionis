@@ -18,7 +18,7 @@ I enjoy designing PCBs, writing firmware, building test setups, and understandin
 - **RP2040 / Raspberry Pi Pico** (Pico SDK, CMake)
 - **STM32** (CubeIDE / HAL)
 - **PYNQ-Z2 / Zynq-7000** (Vivado, basic VHDL, PL/PS interaction)
-- Basic **FreeRTOS**
+- Basic **ZephyrRTOS**
 
 ### ⚙ Control, Simulation & Test
 - **MATLAB / Simulink** (control systems, fuzzy logic, Simscape)
