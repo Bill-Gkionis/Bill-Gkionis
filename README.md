@@ -64,14 +64,14 @@ I enjoy designing PCBs, writing firmware, building test setups, and understandin
 - Common-emitter amplifier experiment with:
   - Oscilloscope
   - Function generator
-  - Multimeter
+  - Bench PSU
 - Waveforms and measurements driven by LUTs / pre-recorded data.
 
 ---
 
 ### ⚡ Power Electronics & Motor Control (Ongoing)
 - Studying and prototyping:
-  - IPM motors
+  - IPMsynRM motors
   - Inverter topologies
   - FOC concepts and feedback using Hall/encoders  
 - Goal: precise, low-noise motion control for small mechanisms.
