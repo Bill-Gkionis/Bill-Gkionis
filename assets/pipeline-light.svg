@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 362" width="960" height="362" role="img" aria-label="Engineering pipeline: study the system, decompose it, learn the principles, set its use and goals, then design, simulate and validate it; a design that fails validation loops back to the start to be remodelled or tuned, and one that passes becomes a tuned, reliable system.">
+<defs>
+<marker id="ma" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#59636e"/></marker>
+<marker id="ml" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#bc4c00"/></marker>
+<marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/></marker>
+</defs>
+<text x="48" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#59636e" text-anchor="start" letter-spacing="1.2">UNDERSTAND THE SYSTEM</text>
+<text x="48" y="346" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#59636e" text-anchor="start" letter-spacing="1.2">BUILD AND PROVE IT</text>
+<rect x="48" y="44" width="180" height="84" rx="10" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1.2"/>
+<circle cx="72" cy="71" r="12" fill="#0969da"/>
+<text x="72" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="92" y="77" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#1f2328" text-anchor="start">Study</text>
+<text x="64" y="101" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#59636e" text-anchor="start">the system, its context</text>
+<text x="64" y="117" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#59636e" text-anchor="start">and the work before it</text>
+<rect x="276" y="44" width="180" height="84" rx="10" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1.2"/>
+<circle cx="300" cy="71" r="12" fill="#0969da"/>
+<text x="300" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="320" y="77" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#1f2328" text-anchor="start">Decompose</text>
+<text x="292" y="101" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#59636e" text-anchor="start">into subsystems and</text>
+<text x="292" y="117" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#59636e" text-anchor="start">their physics domains</text>
+<rect x="504" y="44" width="180" height="84" rx="10" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1.2"/>
+<circle cx="528" cy="71" r="12" fill="#0969da"/>
+<text x="528" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="548" y="77" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#1f2328" text-anchor="start">Principles</text>
+<text x="520" y="101" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#59636e" text-anchor="start">the physics and maths</text>
+<text x="520" y="117" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#59636e" text-anchor="start">each part needs</text>
+<rect x="732" y="44" width="180" height="84" rx="10" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1.2"/>
+<circle cx="756" cy="71" r="12" fill="#0969da"/>
+<text x="756" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="776" y="77" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#1f2328" text-anchor="start">Use &amp; goals</text>
+<text x="748" y="101" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#59636e" text-anchor="start">what it must do: the</text>
+<text x="748" y="117" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#59636e" text-anchor="start">limits and the metrics</text>
+<rect x="732" y="232" width="180" height="84" rx="10" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1.2"/>
+<circle cx="756" cy="259" r="12" fill="#0969da"/>
+<text x="756" y="264" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<text x="776" y="265" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#1f2328" text-anchor="start">Design</text>
+<text x="748" y="289" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#59636e" text-anchor="start">geometry, circuits,</text>
+<text x="748" y="305" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#59636e" text-anchor="start">control and firmware</text>
+<rect x="504" y="232" width="180" height="84" rx="10" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1.2"/>
+<circle cx="528" cy="259" r="12" fill="#0969da"/>
+<text x="528" y="264" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+<text x="548" y="265" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#1f2328" text-anchor="start">Simulate</text>
+<text x="520" y="289" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#59636e" text-anchor="start">FEA, circuit and</text>
+<text x="520" y="305" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#59636e" text-anchor="start">system models, SIL</text>
+<rect x="276" y="232" width="180" height="84" rx="10" fill="#f6f8fa" stroke="#d1d9e0" stroke-width="1.2"/>
+<circle cx="300" cy="259" r="12" fill="#0969da"/>
+<text x="300" y="264" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">7</text>
+<text x="320" y="265" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#1f2328" text-anchor="start">Validate</text>
+<text x="292" y="289" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#59636e" text-anchor="start">against measurements</text>
+<text x="292" y="305" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#59636e" text-anchor="start">and against the goals</text>
+<rect x="48" y="232" width="180" height="84" rx="10" fill="#dafbe1" stroke="#1a7f37" stroke-width="1.6"/>
+<circle cx="72" cy="259" r="12" fill="#1a7f37"/>
+<path d="M66,259 l4,4.5 l8,-9" fill="none" stroke="#f6f8fa" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="92" y="265" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#116329" text-anchor="start">Tuned, reliable</text>
+<text x="64" y="289" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#116329" text-anchor="start">a system that meets</text>
+<text x="64" y="305" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#116329" text-anchor="start">its goals, and proves it</text>
+<line x1="232" y1="86.0" x2="272" y2="86.0" stroke="#59636e" stroke-width="1.6" marker-end="url(#ma)"/>
+<line x1="460" y1="86.0" x2="500" y2="86.0" stroke="#59636e" stroke-width="1.6" marker-end="url(#ma)"/>
+<line x1="688" y1="86.0" x2="728" y2="86.0" stroke="#59636e" stroke-width="1.6" marker-end="url(#ma)"/>
+<line x1="728" y1="274.0" x2="688" y2="274.0" stroke="#59636e" stroke-width="1.6" marker-end="url(#ma)"/>
+<line x1="500" y1="274.0" x2="460" y2="274.0" stroke="#59636e" stroke-width="1.6" marker-end="url(#ma)"/>
+<line x1="822.0" y1="132" x2="822.0" y2="228" stroke="#59636e" stroke-width="1.6" marker-end="url(#ma)"/>
+<text x="812.0" y="184.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="normal" fill="#59636e" text-anchor="end">requirements</text>
+<line x1="272" y1="274.0" x2="232" y2="274.0" stroke="#1a7f37" stroke-width="2" marker-end="url(#mo)"/>
+<text x="252.0" y="265.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#116329" text-anchor="middle">passes</text>
+<path d="M340,228 C340,174.0 168,186.0 168,132" fill="none" stroke="#bc4c00" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#ml)"/>
+<text x="354" y="176.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#bc4c00" text-anchor="start">doesn't pass:</text>
+<text x="354" y="192.0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" fill="#bc4c00" text-anchor="start">remodel or tune</text>
+</svg>

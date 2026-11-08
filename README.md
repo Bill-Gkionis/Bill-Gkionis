@@ -1,108 +1,82 @@
-# Hi, I'm Vasilis 👋
+# Vasileios Gkionis
 
-Electrical & Electronics Engineering student (University of West Attica) focusing on **hardware design**, **embedded systems**, and **control theory**.  
+**Final-year Electrical & Electronics Engineering student · University of West Attica, Athens**
 
-I enjoy designing PCBs, writing firmware, building test setups, and understanding how things work all the way from physics to code.
+I design electric motors and embedded hardware. I model and simulate a system before I build it, and check the model against measurements after.
 
----
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/pipeline-dark.svg">
+    <img src="assets/pipeline-light.svg" width="820" alt="How I work, as a pipeline: study the system, decompose it, learn the principles, set its use and goals, then design, simulate and validate it. A design that fails validation goes back to the start to be remodelled or tuned; one that passes is a tuned, reliable system.">
+  </picture>
+</p>
 
-## 📌 Tools & Technologies
+## Motor design: IPM synRM
 
-### 🧷 PCB & Electronics CAD
-- **Altium Designer** (certified)
-- **SolidWorks** (certified – mechanical design & assemblies)
-- Basic experience with **3D printing constraints** (tolerances, inserts, enclosures)
+[**IPM-synRM**](https://github.com/Bill-Gkionis/IPM-synRM) is a 36-slot, 8-pole permanent-magnet-assisted synchronous reluctance motor, with two N45 magnets per pole in a V and M-19 laminations. It is designed around a fixed envelope and a given set of magnets: the question is the best motor that fits them.
 
-### 🛠 Embedded & Firmware
-- **C (embedded)**, basic **Python**
-- **RP2040 / Raspberry Pi Pico** (Pico SDK, CMake)
-- **STM32** (CubeIDE / HAL)
-- **PYNQ-Z2 / Zynq-7000** (Vivado, basic VHDL, PL/PS interaction)
-- Basic **ZephyrRTOS**
+<p align="center">
+  <img src="assets/ipm-synrm-sector.png" width="600" alt="FEMM solution of the band-free rotor on a 90-degree sector: flux density, flux lines, the magnets with their north arrows, and the phase of every slot layer">
+  <br>
+  <sub>The band-free rotor in FEMM at 10 A on its MTPA angle: flux lines, flux density, and the phase sequence of the double-layer winding.</sub>
+</p>
 
-### ⚙ Control, Simulation & Test
-- **MATLAB / Simulink** (control systems, fuzzy logic, Simscape)
-- **LabVIEW** (basic SCPI automation & data acquisition)
-- Oscilloscope & lab instrumentation (Siglent SDS1104X-E, function generators, bench PSUs)
+- **FEA:** 2D magnetostatics in FEMM, scripted from Python: rotor-position sweeps, flux linkages, L<sub>d</sub> and L<sub>q</sub>, torque and ripple.
+- **Models:** flux-linkage extraction and the Clarke/Park transforms in MATLAB, and a field-oriented-control plant in Simulink.
+- **Model accuracy:** at 40 A, the textbook MTPA formula fed the axis inductances FEMM gives at that current picks a current angle of 25°, where the flux maps find 43°. Cross-saturation costs that choice about 10 % of the torque, so the MTPA table comes from the FEA flux maps, not from the formula.
+- **Optimization:** a scripted pipeline from Python geometry through FEMM to optimization techniques, including NSGA-II and NSGA-III, and factor evaluation with SALib (in progress).
+- **Next:** Elmer, CalculiX and ROSS for the electromagnetic, structural and rotor-dynamic checks, and a flux-map-driven plant in Simulink.
 
-### 🧩 Software, VR & Tools
-- **Unity + C#** (VR lab environments)
-- **Git & GitHub**
-- **Linux / WSL2** development workflow
-- **3D printing** (Bambu X1C – PLA, ASA, PC prototypes)
+## Experience
 
----
+**Internship · Roboteq (Nidec Automation)** · July–August 2026
 
-## 🎓 Certifications
+A calorimeter that measures the losses of a 1.5 kW motor-drive inverter directly as heat. At 90–99 % efficiency, the losses (15–200 W) are too small to resolve as electrical power in minus power out.
 
-- **Altium Designer Essentials Certification**
-- **SolidWorks Associate Certification**
+- A guarded double-jacket chamber: the losses are read from a water loop as ṁ·c<sub>p</sub>·ΔT, while a servoed guard cancels the heat that would leak through the walls. Target accuracy: ±1 W.
+- My part was the electrical, embedded and control side: the thermal model in Simulink and Python, the closed-loop simulation, and the ESP32-S3 firmware on Zephyr RTOS. A mechanical engineer owned the enclosure.
 
+## Other projects
 
+| Project | What it is | Tools |
+|---|---|---|
+| [Desktop-VR Electronics Lab](https://github.com/Bill-Gkionis/VR-thesis) · diploma thesis | A virtual lab bench where students practise with an oscilloscope, a function generator and a bench PSU on a common-emitter amplifier. It is the technical part of a Ph.D. study on instructional design. | Unity, C#, Blender, Inkscape |
+| [RP60 keyboard](https://github.com/Bill-Gkionis/rp60_design) | A 60 % keyboard built end to end: an RP2040 board with USB-C and ESD protection, a 3D-printed case, and [QMK/VIA firmware](https://github.com/Bill-Gkionis/rp60). | Altium Designer, QMK |
+| [Balancing structure](https://github.com/Bill-Gkionis/balancing-structure) | A 3D-printed inverted-triangle structure for trying out a hybrid fuzzy + PID controller. | SOLIDWORKS, 3D printing |
+| [Pi 5 VISA server](https://github.com/Bill-Gkionis/pi5-visa-server) | A Raspberry Pi 5 that puts USB lab instruments on the network: a Flask API forwards VISA/SCPI commands to them. | Python, PyVISA, Flask |
 
----
+## How I work
 
-## 🔧 Selected Projects
+- **Model, simulate, build, measure,** and go back to the model when the data disagrees.
+- **Every number has a source:** a script, a datasheet, a standard or a measurement. Values from course notes get checked against manufacturers' data before I use them.
+- **Decisions are hypotheses.** I write each one down, test it, and reverse it when the results say so.
+- **Scripted and documented.** Analyses run from Python and MATLAB scripts and are written up so that someone else can rerun them.
+- Theory is about a third of a project. Simulation and validation are the rest.
 
-### 🧁 Custom Mechanical Keyboard
-- **MCU:** RP2040  
-- **Firmware:** QMK  
-- **Design:** Custom PCB in Altium + 3D-printed case  
-- Focus on switch matrix, USB-C, ESD protection, and manufacturability.
+## Skills
 
----
+| Area | Tools |
+|---|---|
+| **Modeling & simulation** | MATLAB, Simulink, Simscape Electrical · FEMM (2D FEA) · LTspice |
+| **Programming** | C · Python · MATLAB · C# |
+| **Embedded** | RP2040 · ESP32-S3 · Zephyr RTOS (learning) · STM32 HAL · Zynq-7000 on PYNQ-Z2 (basic VHDL) |
+| **Hardware design** | Altium Designer, KiCad · SOLIDWORKS, Onshape · 3D printing (Bambu Lab X1C) |
+| **Lab** | Oscilloscope, signal generator, bench PSU · SCPI automation with PyVISA · soldering and SMD rework |
+| **Workflow** | Git · Linux (Debian) · VS Code |
+| **Languages** | Greek (native) · English (fluent) |
 
-### 🧠 PYNQ-Z2 & FPGA Work
-- VHDL / PL experiments for university coursework  
-- Simple neural network and hardware-accelerated logic concepts  
-- Using Zynq PS (Cortex-A9) + PL (FPGA) for educational projects.
+## Certifications
 
----
+| Certification | Issuer | Date | Proof |
+|---|---|---|---|
+| Certified SOLIDWORKS Associate (CSWA), Mechanical Design | Dassault Systèmes | April 2024 | [Verify](https://cv.virtualtester.com/qr/?b=SLDWRKS&i=C-TA24JBW89H) · [PDF](certificates/SOLIDWORKS-CSWA-Mechanical-Design.pdf) |
+| Altium Designer Essentials | Altium | December 2023 | [Verify](https://certificates.altium.com/?Id=e602e51e-ffd3-e72a-5af6-9a35f4774852) · [PDF](certificates/Altium-Designer-Essentials.pdf) |
+| Motor Modeling with Simscape Electrical | MathWorks | March 2026 | [PDF](certificates/MathWorks-Motor-Modeling-with-Simscape-Electrical.pdf) |
+| MATLAB Skills for Simulink Modeling (learning path, 5 courses) | MathWorks | April 2026 | [PDF](certificates/MathWorks-MATLAB-Skills-for-Simulink-Modeling.pdf) |
+| Build MATLAB Proficiency (learning path, 8 courses) | MathWorks | April 2026 | [PDF](certificates/MathWorks-Build-MATLAB-Proficiency.pdf) |
 
-### 🎛 VR Electronics Lab (Thesis)
-- VR environment in **Unity** simulating an electronics lab bench  
-- Common-emitter amplifier experiment with:
-  - Oscilloscope
-  - Function generator
-  - Bench PSU
-- Waveforms and measurements driven by LUTs / pre-recorded data.
+Also completed: the MathWorks Onramps for Power Electronics Simulation, Simscape, Circuit Simulation and Signal Processing.
 
----
+## Contact
 
-### ⚡ Power Electronics & Motor Control (Ongoing)
-- Studying and prototyping:
-  - IPMsynRM motors
-  - Inverter topologies
-  - FOC concepts and feedback using Hall/encoders  
-- Goal: precise, low-noise motion control for small mechanisms.
-
----
-
-## 📈 Currently Learning
-
-- Advanced **control theory** (PID, fuzzy logic, second-order systems)
-- **VHDL & FPGA** design (timing, resource usage, PL architectures)
-- **Neural networks** and their integration with embedded systems
-- Better workflows for **Linux-based development** (WSL2 → native Linux).
-
----
-
-## 📂 How to Use This Page (for Recruiters)
-
-This page summarizes my **tools, certifications, and active projects**.  
-For code and designs, please explore my repositories:
-
-- QMK & embedded firmware
-- PCB designs (where publishable)
-- Small utilities and experiments
-
-If you’d like to know more about any specific project, feel free to reach out.
-
----
-
-## 📫 Contact
-
-- **Email:** `grader_encore6t@icloud.com`
-- **GitHub:** [@Bill-Gkionis](https://github.com/Bill-Gkionis)
-
-> 🔒 I deliberately keep personal details light here. Full CV and more information are available on request.
+grader_encore6t@icloud.com · CV on request
