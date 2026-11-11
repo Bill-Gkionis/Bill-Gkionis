@@ -2,7 +2,7 @@
 
 **Final-year Electrical & Electronics Engineering student · University of West Attica, Athens**
 
-I design electric motors and embedded hardware. I model and simulate a system before I build it, and check the model against measurements after.
+I design electric motors and embedded hardware. I model and simulate a system before I build it, and I trust a model only once a second route agrees: a known answer, another solver, and, once there is hardware, a measurement.
 
 <p align="center">
   <picture>
@@ -21,17 +21,32 @@ I design electric motors and embedded hardware. I model and simulate a system be
   <sub>The band-free rotor in FEMM at 10 A on its MTPA angle: flux lines, flux density, and the phase sequence of the double-layer winding.</sub>
 </p>
 
-- **FEA:** 2D magnetostatics in FEMM, scripted from Python: rotor-position sweeps, flux linkages, L<sub>d</sub> and L<sub>q</sub>, torque and ripple.
-- **Models:** flux-linkage extraction and the Clarke/Park transforms in MATLAB, and a field-oriented-control plant in Simulink.
-- **Model accuracy:** at 40 A, the textbook MTPA formula fed the axis inductances FEMM gives at that current picks a current angle of 25°, where the flux maps find 43°. Cross-saturation costs that choice about 10 % of the torque, so the MTPA table comes from the FEA flux maps, not from the formula.
-- **Optimization:** a scripted pipeline from Python geometry through FEMM to optimization techniques, including NSGA-II and NSGA-III, and factor evaluation with SALib (in progress).
-- **Next:** Elmer, CalculiX and ROSS for the electromagnetic, structural and rotor-dynamic checks, and a flux-map-driven plant in Simulink.
+- **FEA:** 2D magnetostatics in FEMM, scripted from Python: rotor-position sweeps, flux linkages, L<sub>d</sub> and L<sub>q</sub>, torque and ripple, checked against Elmer (0.33 % at no load).
+- **Optimization:**
+  - a Morris screening (SALib), NSGA-II (pymoo), a full grid and a blind Bayesian cross-check, over 4,156 designs scored in FEMM;
+  - the chosen design makes 60 % more torque at the same copper loss, and cuts the torque ripple from 18.5 % to 4.8 %.
+- **Model accuracy:**
+  - flux maps of the optimized motor over the whole current plane (425 points) show strong cross-saturation. A constant-parameter model overpredicts the torque by 41 % at 3× rated;
+  - on the starting rotor at 40 A, the textbook MTPA formula fed the axis inductances FEMM gives at that current picks 25°, where FEMM's own best angle is 43°. That choice costs about 10 % of the torque;
+  - so the MTPA table comes from the flux maps, not from the formula.
+- **Losses, heat and stress:**
+  - a Bertotti iron-loss model fitted to M-19;
+  - proximity-effect copper loss, checked against exact solutions;
+  - a lumped thermal network within 2 % of 2D FEA;
+  - CalculiX rotor stress (39 MPa at 10,000 rpm), and ROSS rotor dynamics.
+- **MATLAB/Simulink:**
+  - flux-linkage extraction and the Clarke/Park transforms;
+  - the flux maps for Simscape's FEM-Parameterized PMSM block, validated in MATLAB against the Python reference;
+  - a first FOC drive with SVPWM in Simscape Electrical (unloaded, constant parameters).
+- **The motor map:** the torque–speed envelope with field weakening and MTPV, and the loss and efficiency maps on 48 V (2D FEM estimates).
+- **[Interactive Flux Explorer](https://bill-gkionis.github.io/IPM-synRM/explorer/):** the three designs, the rotor turning, the current dial with MTPA, the phases and their vectors, and the current plane with field weakening.
+- **Next:** a flux-map-driven plant in Simulink.
 
 ## Experience
 
 **Internship · Roboteq (Nidec Automation)** · July–August 2026
 
-A calorimeter that measures the losses of a 1.5 kW motor-drive inverter directly as heat. At 90–99 % efficiency, the losses (15–200 W) are too small to resolve as electrical power in minus power out.
+A calorimeter designed to measure the losses of a 1.5 kW motor-drive inverter directly as heat. At 90–99 % efficiency, the losses (15–200 W) are too small to resolve as electrical power in minus power out.
 
 - A guarded double-jacket chamber: the losses are read from a water loop as ṁ·c<sub>p</sub>·ΔT, while a servoed guard cancels the heat that would leak through the walls. Target accuracy: ±1 W.
 - My part was the electrical, embedded and control side: the thermal model in Simulink and Python, the closed-loop simulation, and the ESP32-S3 firmware on Zephyr RTOS. A mechanical engineer owned the enclosure.
